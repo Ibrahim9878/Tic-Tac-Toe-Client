@@ -1,0 +1,22 @@
+﻿<Window x:Class="Tic_Tac_Toe_Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tic_Tac_Toe_Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="450" ResizeMode="NoResize">
+    <Grid>
+        <UniformGrid Columns="3" Rows="3">
+            <Button x:Name="btn1" FontSize="70" Click="btn_Click"/>
+            <Button x:Name="btn2" FontSize="70" Click="btn_Click"/>
+            <Button x:Name="btn3" FontSize="70" Click="btn_Click"/>
+            <Button x:Name="btn4" FontSize="70" Click="btn_Click"/>
+            <Button x:Name="btn5" FontSize="70" Click="btn_Click"/>
+            <Button x:Name="btn6" FontSize="70" Click="btn_Click"/>
+            <Button x:Name="btn7" FontSize="70" Click="btn_Click"/>
+            <Button x:Name="btn8" FontSize="70" Click="btn_Click"/>
+            <Button x:Name="btn9" FontSize="70" Click="btn_Click"/>
+        </UniformGrid>
+    </Grid>
+</Window>
