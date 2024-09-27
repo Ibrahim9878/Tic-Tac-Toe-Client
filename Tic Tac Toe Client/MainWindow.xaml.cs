@@ -32,9 +32,7 @@ public partial class MainWindow : Window
     {
         var btn = sender as Button;
 
-        var stream = client.GetStream();
-        var bw = new BinaryWriter(stream);
-        var br = new BinaryReader(stream);
+        
         var text = "";
         var row = "";
         var column = "";
@@ -63,23 +61,25 @@ public partial class MainWindow : Window
         {
             column = "2";
         }
-
+        var stream = client.GetStream();
+        var bw = new BinaryWriter(stream);
+        var br = new BinaryReader(stream);
         if (btn is not null)
         {
             try
             {
                 if (Turn)
                 {
-
                     if (client.Connected)
                     {
 
                         text = "X";
                         var str = text + " " + row + " " + column;
                         bw.Write(str);
-
-                        btn.Content = br.ReadString();
-
+                        if (br.ReadString() == "X" || br.ReadString() == "O")
+                            btn.Content = br.ReadString();
+                        else
+                            MessageBox.Show($"Congrats {br.ReadString()} you are the winner");
                     }
                 }
                 else
